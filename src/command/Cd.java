@@ -12,7 +12,7 @@ public class Cd extends Command {
     @Override
     public String execute(List<String> args) {
         if (args.isEmpty()) {
-            return "Incorrect argument. Use `..` to navigate to parent directory or choose right child directory";
+            return "Incorrect argument. Use `..` to navigate to parent directory or choose right child directory.";
         } else {
             String direction = args.get(0);
             File currentDirectory = context.getCurrentDirectory();
@@ -22,7 +22,7 @@ public class Cd extends Command {
             } else {
                 File child = new File(currentDirectory, direction);
                 if (!child.exists()) {
-                    return "Child directory " + direction + " does not exist";
+                    return "Child directory '" + direction + "' does not exist.";
                 } else {
                     context.setCurrentDirectory(child);
                 }
