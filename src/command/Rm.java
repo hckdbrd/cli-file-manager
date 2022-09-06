@@ -17,8 +17,10 @@ public class Rm extends Command {
     @SneakyThrows
     @Override
     public String execute(List<String> args) {
+        if (args.isEmpty()) return "Error. Enter name of file/directory to remove.";
+
         File directory = context.getCurrentDirectory();
-        return deleteDirectory(new File(directory + "/" + args.get(0)));
+        return deleteDirectory(new File(directory, args.get(0)));
     }
 
     public static String deleteDirectory(File directory) {

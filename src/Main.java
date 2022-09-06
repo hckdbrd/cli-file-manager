@@ -11,15 +11,11 @@ import java.util.*;
 public class Main {
 //    File Manager
 //1. View file (TXT) in console
-//2. Add text to the end of file
 //3. Add text to specific location **
-//5.  LS size / r / w / extension
-//   srwe
-//6. Mkdir
-//7. Mkfile
-//8. Rm file / Rm dir
-//9. Rm -r -- recursive
-//10. LS tree 2/3/4/5 .. n  DEPTH -- view file system as a tree ***
+//5.  LS size / r / w / extension (srwe | rswe | etc...)
+//10. Tree 2/3/4/5 .. n  DEPTH -- view file system as a tree ***
+// 11. Clear
+// 12. Chmod
 
     public static void main(String[] args) throws Exception {
         Context context = new Context(null, new File(System.getenv().get("PWD")));
