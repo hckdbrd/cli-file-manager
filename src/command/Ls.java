@@ -67,7 +67,7 @@ public class Ls extends Command {
         }
 
         return Arrays.stream(valueMaxLengths).max().getAsInt();
-    }
+    } // TODO unique size for every column
 
     private String formatTitles(List<String> titles, int cellSize) {
         StringBuilder log = new StringBuilder();
@@ -147,5 +147,5 @@ public class Ls extends Command {
             tree.append("\n");
         }
         return tree.toString();
-    }
+    } // TODO redo implementation for columns
 }
